@@ -82,12 +82,12 @@ if (isset($_GET['memoria'])) {
         
         <input type="number" name="numero1" value="<?= $numero1 ?>" required/>
         <select name ="calcular">
-            <option value ="somar" <?= $calcular == 'somar' ? 'selected' : '' ?>>+</option>
-            <option value ="subtrair" <?= $calcular == 'subtrair' ? 'selected' : '' ?>>-</option>
-            <option value ="multiplicar" <?= $calcular == 'multiplicar' ? 'selected' : '' ?>>x</option>
-            <option value ="dividir" <?= $calcular == 'dividir' ? 'selected' : '' ?>>÷</option>
-            <option value ="fatorar" <?= $calcular == 'fatorar' ? 'selected' : '' ?>>n!</option>
-            <option value ="potencia" <?= $calcular == 'potencia' ? 'selected' : '' ?>>x^y</option>
+            <option id="corzinhadossinais" value ="somar" <?= $calcular == 'somar' ? 'selected' : '' ?>>+</option>
+            <option id="corzinhadossinais" value ="subtrair" <?= $calcular == 'subtrair' ? 'selected' : '' ?>>-</option>
+            <option id="corzinhadossinais" value ="multiplicar" <?= $calcular == 'multiplicar' ? 'selected' : '' ?>>x</option>
+            <option id="corzinhadossinais" value ="dividir" <?= $calcular == 'dividir' ? 'selected' : '' ?>>÷</option>
+            <option id="corzinhadossinais" value ="fatorar" <?= $calcular == 'fatorar' ? 'selected' : '' ?>>n!</option>
+            <option id="corzinhadossinais" value ="potencia" <?= $calcular == 'potencia' ? 'selected' : '' ?>>x^y</option>
         </select>
  
         <input type="number" name="numero2" value="<?= $numero2 ?>" required/>
@@ -118,5 +118,9 @@ if (isset($_GET['memoria'])) {
             padding: 5px;
             margin: 5px 0;
             width: 100px;
+        }
+        #corzinhadossinais{
+            color:blue
+            ;
         }
     </style>
