@@ -34,6 +34,17 @@ if (isset($_GET['numero1'], $_GET['numero2'], $_GET['calcular'])) {
                 $resultado = 'Divisão por zero não é permitida.';
             }
             break;
+        case 'fatorar':
+            $resultado = 1;
+            for($i = 1; $i <= $numero1; $i++){
+                $resultado *= $i;
+            }
+            $operador = '!';
+            break;
+        case 'potencia':
+            $resultado = pow($numero1, $numero2);
+            $operador = '^';
+            break;
         default:
             $resultado = 'Operação inválida.';
     }
@@ -75,6 +86,8 @@ if (isset($_GET['memoria'])) {
             <option value ="subtrair" <?= $calcular == 'subtrair' ? 'selected' : '' ?>>-</option>
             <option value ="multiplicar" <?= $calcular == 'multiplicar' ? 'selected' : '' ?>>x</option>
             <option value ="dividir" <?= $calcular == 'dividir' ? 'selected' : '' ?>>÷</option>
+            <option value ="fatorar" <?= $calcular == 'fatorar' ? 'selected' : '' ?>>n!</option>
+            <option value ="potencia" <?= $calcular == 'potencia' ? 'selected' : '' ?>>x^y</option>
         </select>
  
         <input type="number" name="numero2" value="<?= $numero2 ?>" required/>
