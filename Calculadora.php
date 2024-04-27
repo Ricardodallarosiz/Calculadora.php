@@ -96,7 +96,7 @@ if (isset($_GET['memoria'])) {
     <input type="submit" name="apagar" value="Apagar Histórico"/>
     <input type="submit" name="memoria" value="M"/>
 
-    <p>resultado: <?= $resultado ?> </p>
+    <p id="resultado">resultado: <?= $resultado ?> </p>
     </form>
 
     <?php
@@ -111,3 +111,12 @@ if (isset($_GET['memoria'])) {
     ?>
 </body>
 </html>
+
+<style>
+        #resultado {
+            border: 1px solid black;
+            padding: 5px;
+            margin: 5px 0;
+            width: 100px;
+        }
+    </style>
