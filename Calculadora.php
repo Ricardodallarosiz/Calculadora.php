@@ -115,6 +115,7 @@ if (isset($_GET['memoria'])) {
         }
         echo "</ul>";
     }
+    $imagem_de_fundo =  "https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?cs=srgb&dl=pexels-iriser-1366957.jpg&fm=jpg";  
     ?>
 
     </div>
@@ -123,24 +124,32 @@ if (isset($_GET['memoria'])) {
 </html>
 
 <style>
+
+
+    
     img{
         width: 300px;
         margin-top: 100px;
     }
 
-      body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
+    body {
+    background-image: url('https://i.pinimg.com/originals/6e/77/44/6e774475d75c49868a7cdae7445617f0.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 form {
     width: 300px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: #eead2d;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     margin-top: -430px;
+    opacity: 0.8;
+    
+    
 }
 
 input[type="number"], select {
@@ -196,18 +205,23 @@ input[type="submit"]:hover {
 }
 #historico {
     width: 10%;
-    background-color: #D3D3D3;
+    background-color: #eead2d;
     padding: 20px;
     text-align: center;
-
+    
     border-radius: 8px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    
 }
 
 #container {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    opacity: 0.8;
+    
+    
+    
 }
 #meme{
     display: flex;
