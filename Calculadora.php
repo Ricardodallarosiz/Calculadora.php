@@ -78,6 +78,7 @@ if (isset($_GET['memoria'])) {
     <title>Calculadora php</title>
 </head>
 <body>
+<img src="https://pbs.twimg.com/media/FwvE1DIXsAIaC4Y.jpg:large" alt="alalakakkakakakakaakakka">
     <form>
         
         <input type="number" name="numero1" value="<?= $numero1 ?>" required/>
@@ -99,6 +100,8 @@ if (isset($_GET['memoria'])) {
     <p id="resultado">resultado: <?= $resultado ?> </p>
     </form>
 
+<div id="container">
+    <div id = "historico">
     <?php
     if($mostrarHistorico && isset($_SESSION['historico'])) {
         echo "<h2>Histórico:</h2>";
@@ -109,18 +112,93 @@ if (isset($_GET['memoria'])) {
         echo "</ul>";
     }
     ?>
+
+    </div>
+</div>
 </body>
 </html>
 
 <style>
-        #resultado {
-            border: 1px solid black;
-            padding: 5px;
-            margin: 5px 0;
-            width: 100px;
-        }
-        #corzinhadossinais{
-            color:blue
-            ;
-        }
+    img{
+        width: 100px;
+        margin-top: 100px;
+    }
+
+      body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    background-color: #007BFF;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#resultado {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    background-color:green;
+    color: #fff;
+}
+
+#corzinhadossinais {
+    color: #007BFF;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #000000; 
+    color: #fff;
+    background-color: #d3d3d3;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    border-color:blue; 
+}
+#historico {
+    width: 10%;
+    background-color: #D3D3D3;
+    padding: 20px;
+    text-align: center;
+
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
     </style>
