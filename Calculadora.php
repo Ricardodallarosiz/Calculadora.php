@@ -78,7 +78,9 @@ if (isset($_GET['memoria'])) {
     <title>Calculadora php</title>
 </head>
 <body>
-<img src="https://pbs.twimg.com/media/FwvE1DIXsAIaC4Y.jpg:large" alt="alalakakkakakakakaakakka">
+    <div class="meme">
+        <img src="https://pbs.twimg.com/media/FwvE1DIXsAIaC4Y.jpg:large" alt="alalakakkakakakakaakakka">
+    </div>
     <form>
         
         <input type="number" name="numero1" value="<?= $numero1 ?>" required/>
@@ -93,9 +95,9 @@ if (isset($_GET['memoria'])) {
  
         <input type="number" name="numero2" value="<?= $numero2 ?>" required/>
        
-    <input type="submit" value="Calcular"/>
-    <input type="submit" name="apagar" value="Apagar Histórico"/>
-    <input type="submit" name="memoria" value="M"/>
+    <input id= "bah" type="submit" value="Calcular"/>
+    <input id= "bah" type="submit" name="apagar" value="Apagar Histórico"/>
+    <input id= "bah" type="submit" name="memoria" value="M"/>
 
     <p id="resultado">resultado: <?= $resultado ?> </p>
     </form>
@@ -120,7 +122,7 @@ if (isset($_GET['memoria'])) {
 
 <style>
     img{
-        width: 100px;
+        width: 300px;
         margin-top: 100px;
     }
 
@@ -136,6 +138,7 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin-top: -430px;
 }
 
 input[type="number"], select {
@@ -165,12 +168,15 @@ input[type="submit"]:hover {
     padding: 10px;
     margin-top: 20px;
     border-radius: 4px;
-    background-color:green;
+    background-color:blue;
     color: #fff;
 }
 
 #corzinhadossinais {
     color: #007BFF;
+}
+#bah{
+    color:black;
 }
 input[type="submit"] {
     width: 100%;
@@ -200,5 +206,11 @@ input[type="submit"]:hover {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+}
+#meme{
+    display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
 }
     </style>
