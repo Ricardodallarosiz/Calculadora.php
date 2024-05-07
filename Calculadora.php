@@ -3,7 +3,7 @@ session_start();
 
 $numero1 = 0;
 $numero2 = 0;
-$resultado = 0;
+$resultado = '';
 $calcular = 'somar';
 $mostrarHistorico = false;
 
@@ -49,9 +49,7 @@ if (isset($_GET['numero1'], $_GET['numero2'], $_GET['calcular'])) {
             $resultado = 'Operação inválida.';
     }
 
-    $historico = $_SESSION['historico'] ?? [];
-    $historico[] = "$numero1 $operador $numero2 = $resultado";
-    $_SESSION['historico'] = $historico;
+    $_SESSION['resultado'] = "$numero1 $operador $numero2 = $resultado";
 }
 
 if (isset($_GET['apagar'])) {
@@ -64,6 +62,10 @@ if (isset($_GET['memoria'])) {
         $numero2 = $_SESSION['memoria']['numero2'];
         $calcular = $_SESSION['memoria']['calcular'];
         $mostrarHistorico = true;
+
+        $historico = $_SESSION['historico'] ?? [];
+        $historico[] = $_SESSION['resultado'];
+        $_SESSION['historico'] = $historico;
     } else {
         $_SESSION['memoria'] = ['numero1' => $numero1, 'numero2' => $numero2, 'calcular' => $calcular];
     }
