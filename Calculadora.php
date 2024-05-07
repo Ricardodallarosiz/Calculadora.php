@@ -179,8 +179,8 @@ input[type="submit"]:hover {
     padding: 10px;
     margin-top: 20px;
     border-radius: 4px;
-    background-color:blue;
-    color: #fff;
+    background-color:red;
+    color: black;
 }
 
 #corzinhadossinais {
@@ -200,8 +200,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
-    border-color:blue; 
+    background-color: red;
+    border-color:black; 
 }
 #historico {
     width: 10%;
